@@ -222,6 +222,7 @@ $(".donation-import").click((e) => {
 });
 
 $(".text-block-4").click(() => {
+  $(".donation-import").addClass("unselect");
   $(".submit-button").prop("disabled", true);
   clearForms();
 });
