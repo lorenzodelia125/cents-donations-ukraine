@@ -168,15 +168,18 @@ $("#checkbox-sosteniamoci").change(function () {
 });
 
 $("#ricevuta-serafico").change(function () {
-  if (this.checked && !$("#checkbox-serafico")[0].checked) {
+  if (this.checked) {
     $("#ricevuta-soleterre")[0].checked = true;
     $("#ricevuta-sosteniamoci")[0].checked = true;
     $(".checkbox-ricevuta")
       .not($(".checkbox-ricevuta")[0])
       .addClass("w--redirected-checked");
-    $(".txt-ricevuta").removeClass("hidden");
-    $(".ricevuta").removeClass("hidden");
-    $(".ricevuta").prop("required", true);
+
+    if (!$("#checkbox-serafico")[0].checked) {
+      $(".txt-ricevuta").removeClass("hidden");
+      $(".ricevuta").removeClass("hidden");
+      $(".ricevuta").prop("required", true);
+    }
   } else {
     $("#ricevuta-soleterre")[0].checked = false;
     $("#ricevuta-sosteniamoci")[0].checked = false;
@@ -190,15 +193,18 @@ $("#ricevuta-serafico").change(function () {
 });
 
 $("#ricevuta-soleterre").change(function () {
-  if (this.checked && !$("#checkbox-soleterre")[0].checked) {
+  if (this.checked) {
     $("#ricevuta-serafico")[0].checked = true;
     $("#ricevuta-sosteniamoci")[0].checked = true;
     $(".checkbox-ricevuta")
       .not($(".checkbox-ricevuta")[1])
       .addClass("w--redirected-checked");
-    $(".txt-ricevuta").removeClass("hidden");
-    $(".ricevuta").removeClass("hidden");
-    $(".ricevuta").prop("required", true);
+
+    if (!$("#checkbox-soleterre")[0].checked) {
+      $(".txt-ricevuta").removeClass("hidden");
+      $(".ricevuta").removeClass("hidden");
+      $(".ricevuta").prop("required", true);
+    }
   } else {
     $("#ricevuta-serafico")[0].checked = false;
     $("#ricevuta-sosteniamoci")[0].checked = false;
@@ -218,9 +224,12 @@ $("#ricevuta-sosteniamoci").change(function () {
     $(".checkbox-ricevuta")
       .not($(".checkbox-ricevuta")[2])
       .addClass("w--redirected-checked");
-    $(".txt-ricevuta").removeClass("hidden");
-    $(".ricevuta").removeClass("hidden");
-    $(".ricevuta").prop("required", true);
+
+    if (!$("#checkbox-sosteniamoci")[0].checked) {
+      $(".txt-ricevuta").removeClass("hidden");
+      $(".ricevuta").removeClass("hidden");
+      $(".ricevuta").prop("required", true);
+    }
   } else {
     $("#ricevuta-soleterre")[0].checked = false;
     $("#ricevuta-serafico")[0].checked = false;
