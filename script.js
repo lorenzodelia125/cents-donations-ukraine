@@ -54,6 +54,16 @@ $("#checkbox-serafico").change(function () {
     $(".org").prop("required", false);
     $(".donation-import").addClass("unselect");
     $(".submit-button").prop("disabled", true);
+
+    if (
+      !$("#checkbox-serafico")[0].checked &&
+      $("#ricevuta-serafico")[0].checked
+    ) {
+      $(".txt-ricevuta").removeClass("hidden");
+      $(".ricevuta").removeClass("hidden");
+      $(".ricevuta").prop("required", true);
+    }
+
     clearForms();
     importo = 0;
   }
@@ -93,6 +103,16 @@ $("#checkbox-soleterre").change(function () {
     $(".org").prop("required", false);
     $(".donation-import").addClass("unselect");
     $(".submit-button").prop("disabled", true);
+
+    if (
+      !$("#checkbox-soleterre")[0].checked &&
+      $("#ricevuta-soleterre")[0].checked
+    ) {
+      $(".txt-ricevuta").removeClass("hidden");
+      $(".ricevuta").removeClass("hidden");
+      $(".ricevuta").prop("required", true);
+    }
+
     clearForms();
     importo = 0;
   }
@@ -132,6 +152,16 @@ $("#checkbox-sosteniamoci").change(function () {
     $(".org").prop("required", false);
     $(".donation-import").addClass("unselect");
     $(".submit-button").prop("disabled", true);
+
+    if (
+      !$("#checkbox-sosteniamoci")[0].checked &&
+      $("#ricevuta-sosteniamoci")[0].checked
+    ) {
+      $(".txt-ricevuta").removeClass("hidden");
+      $(".ricevuta").removeClass("hidden");
+      $(".ricevuta").prop("required", true);
+    }
+
     clearForms();
     importo = 0;
   }
