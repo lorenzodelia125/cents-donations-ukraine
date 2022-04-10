@@ -20,7 +20,7 @@ function clearForms() {
   $(":hidden").not(":button, :submit, :reset, :checkbox, :radio").val("");
 }
 
-$("#checkbox-serafico").change(function (e) {
+$("#checkbox-serafico").change(function () {
   if (this.checked) {
     $("#checkbox-soleterre")[0].checked = true;
     $("#checkbox-sosteniamoci")[0].checked = true;
@@ -52,7 +52,7 @@ $("#checkbox-serafico").change(function (e) {
   }
 });
 
-$("#checkbox-soleterre").change(function (e) {
+$("#checkbox-soleterre").change(function () {
   if (this.checked) {
     $("#checkbox-serafico")[0].checked = true;
     $("#checkbox-sosteniamoci")[0].checked = true;
@@ -84,7 +84,7 @@ $("#checkbox-soleterre").change(function (e) {
   }
 });
 
-$("#checkbox-sosteniamoci").change(function (e) {
+$("#checkbox-sosteniamoci").change(function () {
   if (this.checked) {
     $("#checkbox-serafico")[0].checked = true;
     $("#checkbox-soleterre")[0].checked = true;
@@ -116,7 +116,7 @@ $("#checkbox-sosteniamoci").change(function (e) {
   }
 });
 
-$("#ricevuta-serafico").change(function (e) {
+$("#ricevuta-serafico").change(function () {
   if (this.checked) {
     $("#ricevuta-soleterre")[0].checked = true;
     $("#ricevuta-sosteniamoci")[0].checked = true;
@@ -138,12 +138,12 @@ $("#ricevuta-serafico").change(function (e) {
   }
 });
 
-$("#ricevuta-soleterre").change(function (e) {
+$("#ricevuta-soleterre").change(function () {
   if (this.checked) {
     $("#ricevuta-serafico")[0].checked = true;
     $("#ricevuta-sosteniamoci")[0].checked = true;
     $(".checkbox-ricevuta")
-      .not($(".checkbox-ricevuta")[0])
+      .not($(".checkbox-ricevuta")[1])
       .addClass("w--redirected-checked");
     $(".txt-ricevuta").removeClass("hidden");
     $(".ricevuta").removeClass("hidden");
@@ -152,7 +152,7 @@ $("#ricevuta-soleterre").change(function (e) {
     $("#ricevuta-serafico")[0].checked = false;
     $("#ricevuta-sosteniamoci")[0].checked = false;
     $(".checkbox-ricevuta")
-      .not($(".checkbox-ricevuta")[0])
+      .not($(".checkbox-ricevuta")[1])
       .removeClass("w--redirected-checked");
     $(".txt-ricevuta").addClass("hidden");
     $(".ricevuta").addClass("hidden");
@@ -160,12 +160,12 @@ $("#ricevuta-soleterre").change(function (e) {
   }
 });
 
-$("#ricevuta-sosteniamoci").change(function (e) {
+$("#ricevuta-sosteniamoci").change(function () {
   if (this.checked) {
     $("#ricevuta-soleterre")[0].checked = true;
     $("#ricevuta-serafico")[0].checked = true;
     $(".checkbox-ricevuta")
-      .not($(".checkbox-ricevuta")[0])
+      .not($(".checkbox-ricevuta")[2])
       .addClass("w--redirected-checked");
     $(".txt-ricevuta").removeClass("hidden");
     $(".ricevuta").removeClass("hidden");
@@ -174,7 +174,7 @@ $("#ricevuta-sosteniamoci").change(function (e) {
     $("#ricevuta-soleterre")[0].checked = false;
     $("#ricevuta-serafico")[0].checked = false;
     $(".checkbox-ricevuta")
-      .not($(".checkbox-ricevuta")[0])
+      .not($(".checkbox-ricevuta")[2])
       .removeClass("w--redirected-checked");
     $(".txt-ricevuta").addClass("hidden");
     $(".ricevuta").addClass("hidden");
@@ -228,7 +228,7 @@ $(".text-block-4").click(() => {
 
 $(".donation-field").keypress((evt) => {
   $(".submit-button").prop("disabled", false);
-  let charCode = evt.which ? evt.which : event.keyCode;
+  let charCode = evt.which ? evt.which : evt.keyCode;
   if (charCode > 31 && (charCode < 48 || charCode > 57)) {
     return false;
   }
