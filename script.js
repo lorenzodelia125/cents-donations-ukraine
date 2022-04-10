@@ -27,8 +27,8 @@ $("#checkbox-serafico").change(function () {
     $(".checkbox-org")
       .not($(".checkbox-org")[0])
       .addClass("w--redirected-checked");
-    $(".utente").addClass("hidden");
-    $(".utente").prop("required", false);
+    $(".utente").not($(".ricevuta")).addClass("hidden");
+    $(".utente").not($(".ricevuta")).prop("required", false);
     $(".org").removeClass("hidden");
     $(".org").prop("required", true);
     $(".donation-import").addClass("unselect");
@@ -48,8 +48,8 @@ $("#checkbox-serafico").change(function () {
     $(".checkbox-org")
       .not($(".checkbox-org")[0])
       .removeClass("w--redirected-checked");
-    $(".utente").removeClass("hidden");
-    $(".utente").prop("required", true);
+    $(".utente").not($(".ricevuta")).removeClass("hidden");
+    $(".utente").not($(".ricevuta")).prop("required", true);
     $(".org").addClass("hidden");
     $(".org").prop("required", false);
     $(".donation-import").addClass("unselect");
@@ -66,8 +66,8 @@ $("#checkbox-soleterre").change(function () {
     $(".checkbox-org")
       .not($(".checkbox-org")[1])
       .addClass("w--redirected-checked");
-    $(".utente").addClass("hidden");
-    $(".utente").prop("required", false);
+    $(".utente").not($(".ricevuta")).addClass("hidden");
+    $(".utente").not($(".ricevuta")).prop("required", false);
     $(".org").removeClass("hidden");
     $(".org").prop("required", true);
     $(".donation-import").addClass("unselect");
@@ -87,8 +87,8 @@ $("#checkbox-soleterre").change(function () {
     $(".checkbox-org")
       .not($(".checkbox-org")[1])
       .removeClass("w--redirected-checked");
-    $(".utente").removeClass("hidden");
-    $(".utente").prop("required", true);
+    $(".utente").not($(".ricevuta")).removeClass("hidden");
+    $(".utente").not($(".ricevuta")).prop("required", true);
     $(".org").addClass("hidden");
     $(".org").prop("required", false);
     $(".donation-import").addClass("unselect");
@@ -105,8 +105,8 @@ $("#checkbox-sosteniamoci").change(function () {
     $(".checkbox-org")
       .not($(".checkbox-org")[2])
       .addClass("w--redirected-checked");
-    $(".utente").addClass("hidden");
-    $(".utente").prop("required", false);
+    $(".utente").not($(".ricevuta")).addClass("hidden");
+    $(".utente").not($(".ricevuta")).prop("required", false);
     $(".org").removeClass("hidden");
     $(".org").prop("required", true);
     $(".donation-import").addClass("unselect");
@@ -126,8 +126,8 @@ $("#checkbox-sosteniamoci").change(function () {
     $(".checkbox-org")
       .not($(".checkbox-org")[2])
       .removeClass("w--redirected-checked");
-    $(".utente").removeClass("hidden");
-    $(".utente").prop("required", true);
+    $(".utente").not($(".ricevuta")).removeClass("hidden");
+    $(".utente").not($(".ricevuta")).prop("required", true);
     $(".org").addClass("hidden");
     $(".org").prop("required", false);
     $(".donation-import").addClass("unselect");
