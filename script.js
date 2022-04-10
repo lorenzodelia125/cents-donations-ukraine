@@ -117,7 +117,7 @@ $("#checkbox-sosteniamoci").change(function () {
 });
 
 $("#ricevuta-serafico").change(function () {
-  if (this.checked && !$("#checkbox-serafico").checked) {
+  if (this.checked && !$("#checkbox-serafico")[0].checked) {
     $("#ricevuta-soleterre")[0].checked = true;
     $("#ricevuta-sosteniamoci")[0].checked = true;
     $(".checkbox-ricevuta")
@@ -139,7 +139,7 @@ $("#ricevuta-serafico").change(function () {
 });
 
 $("#ricevuta-soleterre").change(function () {
-  if (this.checked && !$("#checkbox-soleterre").checked) {
+  if (this.checked && !$("#checkbox-soleterre")[0].checked) {
     $("#ricevuta-serafico")[0].checked = true;
     $("#ricevuta-sosteniamoci")[0].checked = true;
     $(".checkbox-ricevuta")
@@ -161,7 +161,7 @@ $("#ricevuta-soleterre").change(function () {
 });
 
 $("#ricevuta-sosteniamoci").change(function () {
-  if (this.checked && !$("#checkbox-sosteniamoci").checked) {
+  if (this.checked && !$("#checkbox-sosteniamoci")[0].checked) {
     $("#ricevuta-soleterre")[0].checked = true;
     $("#ricevuta-serafico")[0].checked = true;
     $(".checkbox-ricevuta")
